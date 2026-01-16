@@ -6,7 +6,8 @@ const score = 100
 const scoreValue = 100.3
 
 const isLoggedIn = false
-const outsideTemp = null
+// const outsideTemp = null
+// console.log(typeof outsideTemp);  //output object
 let userEmail;
 
 const id = Symbol('123')
@@ -34,4 +35,30 @@ const myFunction = function(){
 
 console.log(typeof anotherId);
 
-// https://262.ecma-international.org/5.1/#sec-11.4.3
+// https://262.ecma-international.org/5.1/#sec-11.4.3    
+
+// stack (primitive) 
+// // isme og value ki copy milti hai
+
+let myYoutubeName= "abhinavmalkotidotcom"
+let anotherName= myYoutubeName
+anotherName="chaiaurcode"
+
+console.log(myYoutubeName)
+console.log(anotherName)
+
+
+// heap (non primitive)
+// reference jab lete ho toh hume original hi milti hai, usme agar change karenge toh pehle vaali bhi ho jaayegi
+
+let userOne ={
+    email:"user@gmail.com", 
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email ="Abhi@malkoti.com"
+
+console.log(userOne.email); // Abhi@malkoti.com
+console.log(userTwo.email); // Abhi@malkoti.com
